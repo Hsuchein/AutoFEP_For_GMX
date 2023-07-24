@@ -1,7 +1,4 @@
 # AutoFEP_For_GMX
-AutoFEP_For_GMX is a shell scripts framework for automatically perform FEP mission in severs or personal computer
-Before you use the AutoFEP_For_GMX，you should prepare something previously
-1.Prepare the alchemical-analysis module below：
-  https://github.com/MobleyLab/alchemical-analysis
-  And the original code has something wrong, you can use the alchemical-analysis.py in my repository to replace it.
-2.Gromcas(version newer than 5.0.0)
+In the field of molecular dynamics, scholars are well aware that free energy calculations are extremely useful tools, holding significant importance in areas such as drug design and analysis of interactions in large biomolecules. Free Energy Perturbation (FEP) is currently recognized as the most accurate method for computing free energy in the classical physics domain (of course, we should exclude quantum chemistry when discussing this matter), and Gromacs has long supported FEP calculations.
+
+Although Gromacs has greatly reduced our workload, the batch processing procedures required for FEP remain quite complex. Recently, my work specifically demands FEP implementation based on GMX. As a result, I have written some shell scripts here to facilitate the use of GMX for batch processing FEP calculations. These scripts include those designed for server-based computations (utilizing the slurm scheduling system) and for personal computers. However, I have yet to test the scripts for personal computers, so if any issues arise, please feel free to contact me.
