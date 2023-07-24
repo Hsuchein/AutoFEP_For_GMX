@@ -17,7 +17,7 @@ for ((i=0; i<=num_windows; i++));do
     if [ ! -f "min.gro" ]; then
         echo "File min.gro in Windows $i not found"
         echo "File min.gro in Windows $i not found"
-        echo "This may mean minimization in Windows $i go error"
+        echo "This may mean minimization in Windows $i goes error"
         sleep 10
     else
     gmx grompp -p topol.top -c min.gro -r min.gro -f npt.mdp -maxwarn 100 -n complex.ndx -o npt.tpr
