@@ -14,10 +14,10 @@ num_windows=10
 i=0
 for ((i=0; i<=num_windows; i++));do
     cd Windows$i
-    if [ ! -f "min.gro" ]; then
-        echo "File min.gro in Windows $i not found"
-        echo "File min.gro in Windows $i not found"
-        echo "This may mean minimization in Windows $i go error"
+    if [ ! -f "npt.gro" ]; then
+        echo "File npt.gro in Windows $i not found"
+        echo "File npt.gro in Windows $i not found"
+        echo "This may mean NPT in Windows $i go error"
         sleep 10
     else
     gmx grompp -p topol.top -c npt.gro -r npt.gro -f md.mdp -maxwarn 100 -n complex.ndx -o md.tpr
