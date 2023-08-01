@@ -42,6 +42,12 @@ for ((i=0; i<=num_windows; i++));do
     echo "Windows$i Minimization has begun!"
     echo "Windows$i Minimization has begun!"
     grofile=$(find . -maxdepth 1 -type f -name "*.gro" -print -quit)
+    if [ -n "$grofile" ]; then
+    # 变量非空的情况下执行的代码
+    echo "grofile found: $grofile"
+    echo "grofile found: $grofile"
+    echo "grofile found: $grofile"
+
     gmx grompp -p topol.top -c $grofile -r $grofile -f min.mdp -maxwarn 100 -n complex.ndx -o min.tpr
     gmx mdrun -deffnm min
     cd ..
@@ -50,6 +56,16 @@ for ((i=0; i<=num_windows; i++));do
     echo "Windows$i Minimization has done!"
     echo "Windows$i Minimization has done!"
     echo "Windows$i Minimization has done!"
+    else
+    # 变量为空的情况下执行的代码
+    echo "grofile not found, program will exit in 10 seconds"
+    echo "grofile not found, program will exit in 10 seconds"
+    echo "grofile not found, program will exit in 10 seconds"
+    echo "grofile not found, program will exit in 10 seconds"
+    echo "grofile not found, program will exit in 10 seconds"
+    sleep 10
+    exit 1
+    fi
 done
 
 echo "*******************************************************************"
